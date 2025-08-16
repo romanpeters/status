@@ -1,0 +1,19 @@
+monitors:
+#  - name: Google
+#    url: https://www.google.com
+#    timeout: 5
+  - name: Syncthing
+    type: syncthing
+    url: http://localhost:8384
+    api_key: "api_key"
+  - type: ping_csv
+    path: /Users/romanpeters/Developer/server/data/hosts.csv
+    timeout: 2
+  - type: url_csv
+    path: /Users/romanpeters/Developer/server/data/services.csv
+    timeout: 10
+    domain: romanpeters.nl
+  - name: Check Media Mount on Plex server
+    type: command
+    command: "mountpoint -q /mnt/media"
+    host: "plex"
