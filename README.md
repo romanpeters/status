@@ -1,14 +1,16 @@
-A CLI tool dashboard for monitoring the status of various services.
+A CLI/Web dashboard for monitoring the status of various services.
+```shell
+ $ ./status.py -m url
+┌───────────────────────────────────────────────────────────────┐
+│ Google (https://google.com)                [✅ Up]   200 - OK │
+│ Github (https://github.com)                [✅ Up]   200 - OK │
+│ Website (https://offline-domain.com)       [🔴 Up]   404 - OK │
+└───────────────────────────────────────────────────────────────┘
+```
 
 # Features
 - Monitor the status of multiple services.
-- Pluggable architecture for adding new services.
-- Multiple modes
-
-# Modes
-- Print to console
-- Terminal UI
-- Web UI + API
+- Run in the terminal or as a web server.
 
 # Monitoring Services
 - url
@@ -16,7 +18,8 @@ A CLI tool dashboard for monitoring the status of various services.
 - command
 
 # Usage
-uv run status.py [OPTIONS] [MONITOR]
+Requires UV to be installed:
+./status.py [OPTIONS] [MONITOR]
 # Options
 - `-h`, `--help`: Show this message and exit.
 - `-c`, `--console`: Run in console mode.
